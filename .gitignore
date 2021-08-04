@@ -1,7 +1,10 @@
 # 要屏蔽的文件或文件夹
 
-# build
+# /build
 build
 
-#.vscode
+# /.vscode
 .vscode
+
+#  /temp.c
+temp.c
