@@ -12,7 +12,7 @@ int main(void)
 
     printf("Please enter a lowercase letter: ");
     scanf("%c", &ch);
-    getchar(); // 把回车吸收掉
+    getchar(); // 把回车吸收掉，getchar()可以吸收掉单个任意字符
     switch (ch) {
         case 'm': {
             printf("Monday\n");
@@ -20,7 +20,9 @@ int main(void)
         }
         case 't': {
             printf("Please enter next letter: ");
-            scanf("%c", &ch);
+            scanf("%c", &ch); // 可以通过scanf(" %c", %ch);来吸收空白符，用在这里就是把回车符给吸收掉
+                              // 任何格式字符串中的单个空白符处理所有来自输入的可用连续空白符（如同通过于循环中调
+                              // 用 isspace 确定）。注意格式字符串中 "\n" 、 " " 、 "\t\t" 或其他空白无区别。
             if (ch =='u') {
                 printf("Tuesday\n");
             } else if (ch == 'h'){
