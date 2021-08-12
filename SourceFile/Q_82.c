@@ -1,22 +1,19 @@
-// Q_82_Plus
+// Q_82
 /*
 八进制转换为十进制
  */
 
 // 先照着官网上的字符串方法处理，改天可以试着用栈来实现这个操作。%d，%o格式化输出就先不讨论了，这个就没意思了
-
-// 来实现个输入8进制转为10进制，输入10进制转为8进制的程序
 #include <stdio.h>
 
-int DecToOct(char *num);
-int OctToDec(char *num);
+
 int main(void)
 {
     char num[10+1]; // 最多存放一个10位数，+1的目的是留一个位置给空字符(也称终止字符)'\0'
     int revert_num = 0;
     int i = 0;
 
-    printf("Please enter a Octal number(prefixed no more than digits, like 0o10):");
+    printf("Please enter a Octal number(no more than digits):");
     // gets_s(num, 11); 这个函数是C11标准下的，GCC还没有完善好，我就说咋个用不了
     gets(num);
 
@@ -32,4 +29,3 @@ int main(void)
 
     return 0;
 }
-
